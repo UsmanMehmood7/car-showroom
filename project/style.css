@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: all ease-in 0.3s;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+:root {
+  --orange: hsl(22, 91%, 62%);
+  --cyan: hsl(280, 64%, 44%);
+  --dark-cyan: hsl(179, 93%, 27%);
+
+  --white: hsla(0, 0%, 100%, 0.971);
+  --white-transparent: hsla(0, 0%, 100%, 0.727);
+  --light-gray-bg: hsl(0, 0%, 95%);
+}
+
+.bg--1 {
+  background: linear-gradient(180deg, #dc30b1 0%, #a13cce 100%);
+}
+
+.bg--2 {
+  background: linear-gradient(180deg, #252b52 0%, #1a2356 100%);
+}
+
+.bg--3 {
+  background: linear-gradient(180deg, #f53794 0%, #fe6a51 100%);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.cyan {
+  color: var(--cyan);
+}
+
+.dark__cyan {
+  color: var(--dark-cyan);
+}
+
+.bg__light {
+  background-image: url(./images/top_bg.png);
+  background-size: cover;
+}
+
+.text--white {
+  color: var(--white);
+}
+
+.text--white--transparent {
+  color: var(--white-transparent);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: stretch;
+  height: 100%;
+  margin: 1.5rem;
+  max-width: 57.75rem;
+  box-shadow: 6px 6px 34px 15px rgba(3, 24, 44, 0.15);
+}
+
+.container div {
+  position: relative;
+  height: 60%;
+}
+
+.container__padding {
+  padding: 2.8rem;
+}
+
+.padding__1 {
+  padding-bottom: 1.125rem;
+}
+
+.padding__2 {
+  padding-bottom: 3.875rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 12px 36px;
+  border-radius: 2em;
+  color: gray;
+  background-color: var(--white);
+  transition: ease-in-out 0.3s;
+  border: solid 1px rgba(0, 0, 0, 0);
+}
+
+.btn:hover {
+  color: white;
+  font-weight: bold;
+  border-color: var(--white);
+  background-color: hsla(0, 0%, 100%, 0.02);
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  border: solid 1px var(--white);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-family: "Lexend Deca";
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 25px;
+  max-width: 220px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.rounded--left {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.rounded--right {
+  border-radius: 0px 8px 8px 0px;
+}
+
+.rounded--top {
+  border-radius: 8px 8px 0px 0px;
+}
+.rounded--bottom {
+  border-radius: 0px 0px 8px 8px;
+}
+@media (max-width: 850px) {
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 18px;
+  }
+}
+
+@media (max-width: 625px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+  }
+
+  .paragraph {
+    max-width: 100%;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px 36px;
+  }
+
+  .padding__2 {
+    padding-bottom: 1.5rem;
+  }
+
+  .rounded--left {
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  .rounded--right {
+    border-radius: 0px 0px 8px 8px;
+  }
+}
+
+@media (hover: hover) {
+  .card:hover {
+    filter: brightness(1.1);
+    padding-inline: 3.5rem;
+    transition: all ease 0.3s;
+  }
+
+  .container:hover > card:not(:hover) {
+    filter: grayscale(1.5);
+    transition: all ease 0.3s;
+  }
+  .card--1:hover,
+  .card--2:hover,
+  .card--3:hover {
+    transition: all ease 0.5s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card--1:hover {
+    background-image: url(./images/sedan.png);
+    transition: all ease 0.5s;
+  }
+
+  .card--2:hover {
+    background-image: url(./images/suv.png);
+    transition: all ease 0.5s;
+  }
+
+  .card--3:hover {
+    background-image: url(./images/luxury.png);
+    transition: all ease 0.5s;
+  }
+}
+
+#main {
+  height: 40px;
+}
